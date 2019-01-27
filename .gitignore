@@ -1,0 +1,5 @@
+util/bot/bot.json
+util/database/database.json
+venv/
+*.pyc
+*.pyo

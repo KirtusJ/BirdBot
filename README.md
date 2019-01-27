@@ -1,0 +1,2 @@
+# BirdBot
+BirdBot for Discord

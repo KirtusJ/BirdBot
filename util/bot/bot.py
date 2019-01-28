@@ -9,5 +9,6 @@ bot = {
 	"description" : app["description"],
 	"version" : app["version"],
 	"prefixes" : app["prefixes"],
-	"extensions" : app["extensions"]
+	"extensions" : app["extensions"],
+	"owners" : app["owners"]
 }

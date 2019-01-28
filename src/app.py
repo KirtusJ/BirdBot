@@ -17,6 +17,8 @@ class Application():
 		self.version = bot_config['version']
 		self.prefixes = bot_config['prefixes']
 		self.extensions = bot_config['extensions']
+		self.owners = bot_config['owners']
+
 	def __create__(self):
 		self.bot = commands.Bot(command_prefix=self.prefixes, description=self.description)
 	def load_extensions(self):

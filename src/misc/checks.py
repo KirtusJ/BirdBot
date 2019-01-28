@@ -15,24 +15,33 @@ class Checks():
 	def is_owner(self):
 		async def predicate(ctx):
 			user = database.session.query(DiscordUser).filter_by(id=ctx.author.id).first()
-			if user.owner:
-				return True
+			if user:
+				if user.owner:
+					return True
+				else:
+					raise NotOwner("You must be an owner to use this command")
 			else:
-				raise NotModerator("You must be an owner to use this command")
+				raise NotOwner("You must be an owner to use this command")
 		return commands.check(predicate)
 	def is_mod(self):
 		async def predicate(ctx):
 			user = database.session.query(DiscordUser).filter_by(id=ctx.author.id).first()
-			if user.moderator or user.owner:
-				return True
+			if user:
+				if user.moderator or user.owner:
+					return True
+				else:
+					raise NotModerator("You must be a moderator to use this command")
 			else:
 				raise NotModerator("You must be a moderator to use this command")
 		return commands.check(predicate)
 	def not_blacklisted(self):
 		async def predicate(ctx):
 			user = database.session.query(DiscordUser).filter_by(id=ctx.author.id).first()
-			if user.blacklisted:
-				raise Blacklisted("You cannot use this command if you are blacklisted")
+			if user:
+				if user.blacklisted:
+					raise Blacklisted("You cannot use this command if you are blacklisted")
+				else:
+					return True
 			else:
 				return True
 		return commands.check(predicate)

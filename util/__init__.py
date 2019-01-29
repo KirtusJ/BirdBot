@@ -1,11 +1,8 @@
 import os 
 
-from .bot.bot import bot as bot_config
-from .bot.development import development as bot_development
-from .bot.production import production as bot_production
-
-from .database.development import development as db_development
-from .database.production import production as db_production
+from .public import bot_config
+from .development import bot_development, db_development
+from .production import bot_production, db_production
 
 def bot_env():
 	try:

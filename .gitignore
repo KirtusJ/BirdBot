@@ -1,4 +1,4 @@
-util/bot/bot.json
+util/bot/secret.json
 util/database/database.json
 venv/
 *.pyc

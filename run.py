@@ -1,3 +1,6 @@
 from src import app
 
-app.bot.run(app.env['token'], bot=True, reconnect=True)
+try:
+	app.bot.run(app.env['token'], bot=True, reconnect=True)
+except Exception as e:
+	print(e)

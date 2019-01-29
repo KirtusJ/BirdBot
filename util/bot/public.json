@@ -1,0 +1,10 @@
+{
+	"bot" : {
+		"name" : "Bird Bot",
+		"description" : "This is a bot made by kurt haha",
+		"version" : 1.0,
+		"prefixes" : ["z.", "bird "],
+		"extensions" : ["src.modules.moderator", "src.modules.misc", "src.modules.cog", "src.modules.utility"],
+		"owners" : [248359567182790658, 149688910220361728, 117678528220233731]
+	}
+}

@@ -1,10 +1,10 @@
 import json
 
-with open("util/bot/bot.json", "r") as bot:
+with open("util/bot/public.json", "r") as bot:
 	data = json.load(bot)
 	app = data["bot"]
 
-bot = {
+bot_config = {
 	"name" : app["name"],
 	"description" : app["description"],
 	"version" : app["version"],

@@ -1,2 +1,1 @@
-# BirdBot
-BirdBot for Discord
+# DiscordBot
